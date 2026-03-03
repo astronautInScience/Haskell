@@ -1,0 +1,4 @@
+packages: projects/*/*.cabal
+
+package *
+  ghc-options: -Wall
