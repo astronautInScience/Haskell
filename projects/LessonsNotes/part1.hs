@@ -37,4 +37,26 @@ zipWith :: (a -> b -> c) -> [a] -> [b] -> [c]
 Prelude> zipWith (+) [0,2,5] [1,3,3]
 [1,5,8]
 
+--building a list
+descend 0 = []
+descend n = n : descend (n-1)
+
+--Pattern Matching for Lists
+myhead :: [Int] -> Int
+myhead [] = -1
+myhead (first:rest) = first
+
+mytail :: [Int] -> [Int]
+mytail [] = []
+mytail (first:rest) = rest
+
+--nest patterns
+sumFirstTwo :: [Integer] -> [Integer]
+sumFirstTwo (a:b:_) = a+b
+sumFirstTwo _ = 0
+
+--List Comprehensions
+[i | i <- [1..7], even i]
+  ==> [2,4,6]
+
 
