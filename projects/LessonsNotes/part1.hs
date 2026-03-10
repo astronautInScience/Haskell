@@ -59,4 +59,7 @@ sumFirstTwo _ = 0
 [i | i <- [1..7], even i]
   ==> [2,4,6]
 
+compare :: Ord a => a -> a -> Ordering
+(<) :: Ord a => a -> a -> Bool
+(>) :: Ord a => a -> a -> Bool 
 
